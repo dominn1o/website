@@ -1,11 +1,31 @@
 @font-face {
     font-family: 'Fixedsys';
-    src: url(/website/fonts/FSEX300.ttf);
+    src: url(/fonts/FSEX300.ttf);
+}
+
+@font-face {
+  font-family: 'Glamour';
+    src: url(/fonts/Glamour.ttf);
+}
+
+@font-face {
+  font-family: 'Hillside';
+    src: url(/fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf);
+}
+
+@font-face {
+  font-family: 'Milton';
+    src: url(/fonts/Milton_One.otf);
 }
 
 .large-text {
-    font-size: 45px;
+    font-size: 500%;
+    transform: scale(3,1.1);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 0.7;
+    margin: 0.5rem 0;
+    color: rgb(0, 0, 0);
 }
 
 .studs {
@@ -28,13 +48,18 @@
   }
 }
 
+.technomusic {
+  border-radius: 4.2%;
+  width: 100%;
+}
+
 .image-container {
       position: relative;
       display: inline-block;
     }
     .image-container img {
       display: block;
-      width: 100%;
+      width: 80%;
       height: auto;
     }
     .image-container .introText {
@@ -44,12 +69,21 @@
       transform: translate(-50%, -50%);
       color: black;
       font-family: 'Fixedsys', sans-serif;
-      font-size: 30px;
+      font-size: 100%;
     }
+
+.eternalpeace {
+  transform: scale(2,1);
+  font-family: 'Milton', sans-serif;
+  font-size:1500%; /* scales with screen size */
+  line-height: 1.1;  /* keeps spacing tight but readable */
+  margin: 0.5rem 0;  /* small vertical margins */
+  text-align: center; /* optional for style */
+}
 
 body {
     /* Set the image */
-    background-image: url('/website/media/beksnski.png');
+    background-image: url('/media/beksnski.png');
 
     /* Make sure it covers the whole page */
     background-size: cover;
@@ -63,4 +97,18 @@ body {
 
     margin: 0;
     height: 3500;
+}
+
+.container {
+    display: flex;        /* create a horizontal flex layout */
+    height: 100vh;        /* fill the full viewport height */
+}
+
+.left, .right {
+    flex: 1;              /* each takes 50% width */
+    padding: 20px;        /* optional spacing */
+}
+
+.wallpaper-splitfin {
+  border: 5px lightblue;
 }
