@@ -51,7 +51,7 @@
 
 .technomusic {
   border-radius: 4.2%;
-  width: 100%;
+  width: 80%;
 }
 
 .image-container {
@@ -111,6 +111,22 @@ body {
     padding: 20px;        /* optional spacing */
 }
 
-.wallpaper-splitfin {
-  border: 5px lightblue;
+.musicIpod {
+  position: relative;
+  display: inline-block;
+}
+
+.musicIpod {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.musicIpod audio {
+  width: 70%;
+  position: absolute;
+  bottom: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
