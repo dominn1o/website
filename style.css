@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Fixedsys';
+    src: url(/website/fonts/FSEX300.ttf);
+}
+
+.large-text {
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.studs {
+  overflow: hidden;        /* hides overflow outside the container */
+  width: 100vw;             /* full viewport width */
+}
+
+.studs img {
+  display: block;
+  width: 200%;              /* wider than the viewport so we have room to scroll */
+  animation: scroll-right 17s linear infinite;
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0); /* move right halfway (since width is 200%) */
+  }
+}
+
+.image-container {
+      position: relative;
+      display: inline-block;
+    }
+    .image-container img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .image-container .introText {
+      position: absolute;
+      top: 16%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      color: black;
+      font-family: 'Fixedsys', sans-serif;
+      font-size: 30px;
+    }
+
+body {
+    /* Set the image */
+    background-image: url('/website/media/beksnski.png');
+
+    /* Make sure it covers the whole page */
+    background-size: cover;
+
+
+    /* Center the image */
+    background-position: center;
+
+    /* Optional: Prevent repeating */
+    background-repeat: no-repeat;
+
+    margin: 0;
+    height: 3500;
+}
