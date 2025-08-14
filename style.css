@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'Fixedsys';
-    src: url(fonts/FSEX300.ttf);
+    src: url('fonts/FSEX300.ttf');
 }
 
 @font-face {
   font-family: 'Glamour';
-    src: url(fonts/Glamour.ttf);
+    src: url('fonts/Glamour.ttf');
 }
 
 @font-face {
   font-family: 'Hillside';
-    src: url(fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf);
+    src: url('fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf');
 }
 
 @font-face {
   font-family: 'Milton';
-    src: url(fonts/Milton_One.otf);
+  src: url('fonts/Milton_One.otf') format('opentype');
 }
 
 .large-text {
