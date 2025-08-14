@@ -6,57 +6,73 @@
     <link rel="stylesheet" href="style.css" type="text/css">
     <script type="text/javascript" src="./script.js"></script>
     <title>dm0niix</title>
-    
 </head>
 <body>
 
+    <!-- Scrolling studs banner -->
     <div class="studs">
-        <img src="media/studs.png" height="85">
+        <img src="media/studs.png" alt="Studs Banner">
     </div>
 
-    <div id="background" style="text-align: center;" class="titleText">
-        <p class="large-text">DM0NIIX</p>
+    <!-- Title section -->
+    <header class="titleText">
+        <h1 class="large-text">DM0NIIX</h1>
         <p class="eternalpeace">EternalPeace</p>
-        <hr color="gray">
+        <hr>
+    </header>
+
+    <!-- Button -->
+    <div class="centered">
+        <button id="button1" type="button" onclick="buttonPress()">PRESS ME MF</button>
     </div>
 
-    <div style="text-align: center;">
-    <button style="padding: 1%; background-color: rgb(211, 107, 211); color: darkblue;" id="button1" type="button" onclick="buttonPress()">PRESS ME MF</button>
-    </div>
-
-    <div class="container">
-
-        <div class="left">
+    <!-- Main content -->
+    <main class="container">
+        <!-- Left Column -->
+        <section class="left">
             <div class="image-container">
-            <p class="introText">This is my creative dump/journal/blog/portfolio</p>
-            <img src="media/notepad.png">
-            <br>
-            <br>
-            <br>
+                <p class="introText">This is my <br>
+                    creative dump/journal/blog/portfolio</p>
+                <img src="media/notepad.png" alt="Notepad">
             </div>
-            
-            <video class="technomusic" controls autoplay src="media/technomusic.mp4" loop></video>
-            <br>
-            <img src="media/stickynote.png">
-            <br>
-            
+
+            <video class="technomusic" controls autoplay loop>
+                <source src="media/technomusic.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <img src="media/stickynote.png" alt="Sticky Note">
+
             <div class="musicIpod">
-                <img src="media/ipod.png">
+                <img src="media/ipod.png" alt="iPod">
                 <div class="songs">
-                    <audio controls src="music/edm.mp3">EDM</audio>
-                </div>    
+
+                    <audio controls class="edm">
+                        <source src="music/edm.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <audio controls class="funky">
+                        <source src="music/funky.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                    <audio controls class="turnt">
+                        <source src="music/turnt.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+
+                </div>
             </div>
-        
-        </div>
+        </section>
 
-        <div class="right">
-            <div id="wallpaper" style="text-align: right;">
-                <img src="media/split.png" width="101%" height="260%" class="wallpaper-split">
+        <!-- Right Column -->
+        <section class="right">
+            <div id="wallpaper">
+                <img src="media/split.png" alt="Split Wallpaper" class="wallpaper-split">
             </div>
-        </div>
+        </section>
+    </main>
 
-
-
-    </div>
 </body>
 </html>

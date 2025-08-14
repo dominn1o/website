@@ -1,132 +1,161 @@
+/* Fonts */
 @font-face {
     font-family: 'Fixedsys';
     src: url('fonts/FSEX300.ttf');
 }
-
 @font-face {
-  font-family: 'Glamour';
+    font-family: 'Glamour';
     src: url('fonts/Glamour.ttf');
 }
-
 @font-face {
-  font-family: 'Hillside';
+    font-family: 'Hillside';
     src: url('fonts/HillsideCalligraphy_PERSONAL_USE_ONLY.otf');
 }
-
 @font-face {
-  font-family: 'Milton';
-  src: url('fonts/Milton_One.otf') format('opentype');
+    font-family: 'Milton';
+    src: url('fonts/Milton_One.otf') format('opentype');
 }
 
-.large-text {
-    font-size: 500%;
-    transform: scale(3,1.1);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-weight: bold;
-    line-height: 0.7;
-    margin: 0.5rem 0;
-    color: rgb(0, 0, 0);
+/* Body & Background */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-image: url('media/beksnski.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+}
+
+/* Studs banner */
+.studs {
+    width: 100%;
     overflow: hidden;
 }
-
-.studs {
-  overflow: hidden;        /* hides overflow outside the container */
-  width: 100vw;             /* full viewport width */
-}
-
 .studs img {
-  display: block;
-  width: 200%;              /* wider than the viewport so we have room to scroll */
-  animation: scroll-right 17s linear infinite;
+    display: block;
+    width: 200%;
+    animation: scroll-right 17s linear infinite;
 }
-
 @keyframes scroll-right {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0); /* move right halfway (since width is 200%) */
-  }
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
 }
 
-.technomusic {
-  border-radius: 4.2%;
-  width: 80%;
+/* Title */
+.titleText {
+    text-align: center;
 }
-
-.image-container {
-      position: relative;
-      display: inline-block;
-    }
-    .image-container img {
-      display: block;
-      width: 80%;
-      height: auto;
-    }
-    .image-container .introText {
-      position: absolute;
-      top: 16%;
-      left: 35%;
-      transform: translate(-50%, -50%);
-      color: black;
-      font-family: 'Fixedsys', sans-serif;
-      font-size: 100%;
-    }
-
+.large-text {
+    font-size: clamp(2rem, 6vw, 5rem);
+    font-weight: bold;
+    line-height: 0.9;
+    margin: 0.5rem 0;
+}
 .eternalpeace {
-  transform: scale(2,1);
-  font-family: 'Milton', sans-serif;
-  font-size:1500%; /* scales with screen size */
-  line-height: 1.1;  /* keeps spacing tight but readable */
-  margin: 0.5rem 0;  /* small vertical margins */
-  text-align: center; /* optional for style */
+    font-family: 'Milton', sans-serif;
+    font-size: clamp(2rem, 8vw, 8rem);
+    line-height: 1.1;
+    margin: 0.5rem 0;
 }
 
-body {
-    overflow-x: hidden;
-    /* Set the image */
-    background-image: url('media/beksnski.png');
-
-    /* Make sure it covers the whole page */
-    background-size: cover;
-
-
-    /* Center the image */
-    background-position: center;
-
-    /* Optional: Prevent repeating */
-    background-repeat: no-repeat;
-
-    margin: 0;
-    height: 3500px;
+/* Button */
+.centered {
+    text-align: center;
+}
+#button1 {
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#button1:hover {
+    opacity: 0.85;
 }
 
+/* Main layout */
 .container {
-    display: flex;        /* create a horizontal flex layout */
-    height: 100vh;        /* fill the full viewport height */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
 }
-
 .left, .right {
-    flex: 1;              /* each takes 50% width */
-    padding: 20px;        /* optional spacing */
+    flex: 1 1 300px;
 }
 
+/* Image over text */
+.image-container {
+    position: relative;
+}
+.image-container img {
+    max-width: 50%;
+    height: auto;
+}
+.image-container .introText {
+    position: absolute;
+    top: 15%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    font-family: 'Fixedsys', sans-serif;
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
+    color: black;
+    text-align: left;
+}
+
+/* Videos & Images */
+.technomusic {
+    border-radius: 4.2%;
+    width: 100%;
+    max-width: 650px;
+    display: block;
+    margin: 1rem 0;
+}
 .musicIpod {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    max-width: 300px;
+}
+.musicIpod img {
+    width: 200%;
+}
+.musicIpod .edm {
+    width: 145%;
+    position: absolute;
+    bottom: 79%;
+    left: 105%;
+    transform: translateX(-50%);
 }
 
-.musicIpod {
-  display: block;
-  width: 100%;
-  height: auto;
+.musicIpod .funky {
+    width: 145%;
+    position: absolute;
+    bottom: 64%;
+    left: 105%;
+    transform: translateX(-50%);
 }
 
-.musicIpod audio {
-  width: 70%;
-  position: absolute;
-  bottom: 80%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
+.musicIpod .turnt {
+    width: 145%;
+    position: absolute;
+    bottom: 49%;
+    left: 105%;
+    transform: translateX(-50%);
+}
+
+/* Wallpaper */
+.wallpaper-split {
+    width: 100%;
+    height: auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .eternalpeace {
+        font-size: clamp(1.5rem, 10vw, 3rem);
+    }
 }
