@@ -51,6 +51,10 @@ body {
     line-height: 1.1;
     margin: 0.5rem 0;
 }
+.binary {
+  font-size: clamp(0.3rem, 0.6vw, 0.6rem);
+  color: rgb(200,20,30);
+}
 
 /* Button */
 .centered {
@@ -101,46 +105,50 @@ body {
 /* Videos & Images */
 .technomusic {
     border-radius: 4.2%;
-    width: 100%;
+    width: 65%;
     max-width: 650px;
     display: block;
     margin: 1rem 0;
+}
+.stickynote {
+  width: 113%;
 }
 .musicIpod {
     position: relative;
     max-width: 300px;
 }
 .musicIpod img {
-    width: 200%;
+    width: 140%;
 }
 .musicIpod .edm {
-    width: 145%;
+    width: 100%;
     position: absolute;
     bottom: 79%;
-    left: 105%;
+    left: 74%;
     transform: translateX(-50%);
 }
 
 .musicIpod .funky {
-    width: 145%;
+    width: 100%;
     position: absolute;
     bottom: 64%;
-    left: 105%;
+    left: 74%;
     transform: translateX(-50%);
 }
 
 .musicIpod .turnt {
-    width: 145%;
+    width: 100%;
     position: absolute;
     bottom: 49%;
-    left: 105%;
+    left: 74%;
     transform: translateX(-50%);
 }
 
 /* Wallpaper */
 .wallpaper-split {
-    width: 100%;
+    width: 68%;
     height: auto;
+    text-align: center;
 }
 
 /* Responsive tweaks */
