@@ -29,22 +29,15 @@ body {
 
 /* Studs banner */
 .studs {
-    width: 100%;
-    overflow: hidden;
-}
-.studs img {
-    display: block;
-    width: 200%;
-    animation: scroll-right 17s linear infinite;
-}
-@keyframes scroll-right {
-    0% { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
+    height: 85px;
+    background: url('media/studs.png') repeat-x;
+    background-size: auto 100%;
 }
 
 /* Title */
 .titleText {
     text-align: center;
+    transform: scale(2.5,1);
 }
 .large-text {
     font-size: clamp(2rem, 6vw, 5rem);
