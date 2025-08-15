@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="player.css" type="text/css">
+    <link rel="stylesheet" href="player/player.css" type="text/css">
     <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="player.js"></script>
+    <script type="text/javascript" src="player/player.js"></script>
     <title>dm0niix</title>
 </head>
 <body>
@@ -25,8 +25,9 @@
     </div>
 
     <!-- Button -->
-    <div class="button" style="text-align: center;">
+    <div class="buttons" style="text-align: center;">
         <button id="button1" type="button" onclick="buttonPress()">PRESS ME MF (PORTFOLIO)</button>
+        <button id="minesweeperButton" type="button" onclick="openMinesweeper()">MINESWEEPER</button>
     </div>
 
     <!-- Main content -->
@@ -74,9 +75,9 @@
                     </div>
 
                     <ul class="playlist">
-                    <li data-src="music/edm.mp3">Song 1</li>
-                    <li data-src="music/funky.wav">Song 2</li>
-                    <li data-src="music/turnt.mp3">Song 3</li>
+                    <li data-src="music/edm.mp3">EDM.wav</li>
+                    <li data-src="music/funky.wav">FUNKY.wav</li>
+                    <li data-src="music/turnt.mp3">TURNT.wav</li>
                     </ul>
                     </div>
 
@@ -89,7 +90,10 @@
         <!-- Right Column -->
         <section class="right">
             <div id="wallpaper" style="text-align: right;">
-                <img src="media/split.png" alt="Split Wallpaper" class="phone-split">
+                <div class="phones">
+                    <img src="media/split.png" alt="Split Wallpaper" class="phone-split" onclick="ChangePhone()">
+                    <img src="media/splitInv.png" alt="Split Wallpaper" class="phone-splitInv" onclick="ChangePhone()">
+                </div>
             </div>
         </section>
     </main>

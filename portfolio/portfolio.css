@@ -30,7 +30,6 @@
     height: 5px;
     background: purple;
     border-radius: 5px;
-    webkit-appearance: none;
 }
 
 .player input[type="range"]::-webkit-slider-thumb {

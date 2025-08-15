@@ -60,7 +60,7 @@ body {
   color: rgb(200,20,30);
 }
 
-/* Button */
+/* Buttons */
 .centered {
     text-align: center;
 }
@@ -75,6 +75,18 @@ body {
 #button1:hover {
     opacity: 0.85;
 }
+#minesweeperButton {
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#minesweeperButton:hover {
+    opacity: 0.85;
+}
+
 
 /* Main layout */
 .container {
@@ -159,6 +171,29 @@ body {
     height: auto;
     text-align: right;
 }
+.phone-splitInv {
+    max-width: 100%;
+    height: auto;
+    text-align: right;
+}
+
+.phones {
+  position: relative;   /* establish positioning context */
+  max-width: 100%;         /* container width */
+  height: auto;        /* container height */
+}
+
+.phone-splitInv {
+  object-fit: cover;    /* optional, keeps aspect ratio */
+}
+
+.phone-split {
+  position: absolute;   /* position relative to container */
+  top: 0%;            /* distance from top */
+  left: 0%;           /* distance from left */
+  width: 100%;         /* size of overlay */
+  height: auto;
+}
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
@@ -169,3 +204,5 @@ body {
         font-size: clamp(1.5rem, 10vw, 3rem);
     }
 }
+
+

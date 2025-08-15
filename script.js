@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'portfolio/portfolio.html';
     });
 
+    // Open minesweeper
+    document.getElementById('minesweeperButton').addEventListener('click', () => {
+        window.location.href = 'minesweeper/minesweeper.html';
+    });
+
     // Studs Banner Movement
     const studs = document.querySelector('.studs');
     let offset = 0;
@@ -28,6 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
         nums.textContent = randomBinaryString(50);
     }, 80);
+
+    //Change the phone image on click
+    const phone = document.querySelector('.phone-split');    // # for id
+    const phoneInv = document.querySelector('.phone-splitInv');
+    phone.style.opacity = '1'
+
+    phone.addEventListener('click', () => {
+        if (phone.style.opacity == '1') { 
+        phone.style.opacity = '0';
+        } else {
+            phone.style.opacity = '1';
+        }
+    });
+
+
 
     animateStuds();
 });
