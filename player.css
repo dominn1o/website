@@ -1,0 +1,135 @@
+/* Player container */
+.player-container {
+  border-radius: 3%;
+  position: absolute;
+  left: 23%;
+  top: 12%;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 101.5%;           /* container adapts to screen width */
+  max-width: 500px;     /* optional max size */
+  margin: 0 auto;       /* center horizontally */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Player */
+.player {
+  display: flex;
+  flex-wrap: wrap;       /* allow elements to wrap on small screens */
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  width: 100%;           /* fill container width */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Play/Pause button */
+.player-play-btn {
+  background: #007bff;
+  border: none;
+  color: white;
+  font-size: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;       /* don't shrink button */
+}
+
+.player-play-btn:hover {
+  background: #0056b3;
+}
+
+.player-icon-play,
+.player-icon-pause {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Progress bar */
+.player-progress {
+  flex: 1 1 100px;      /* grow, shrink, minimum width */
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.player-progress-filled {
+  height: 100%;
+  background: #007bff;
+  flex-basis: 0%;
+  transition: flex-basis 0.1s linear;
+}
+
+/* Timer */
+.player-time-current,
+.player-time-duration {
+  font-size: 12px;
+  color: #333;
+  flex-shrink: 0;       /* prevent shrinking */
+}
+
+/* Volume slider */
+.player-volume {
+  width: 80px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Playlist */
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;          /* responsive width */
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+.playlist li {
+  padding: 9.25px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.playlist li:hover {
+  background: #f0f0f0;
+}
+
+.playlist li.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Responsive tweaks for very small screens */
+@media (max-width: 400px) {
+  .player {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .player-volume {
+    width: 100%;
+  }
+  
+  .player-progress {
+    width: 100%;
+  }
+}

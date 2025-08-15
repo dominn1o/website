@@ -110,8 +110,8 @@ body {
 /* Videos & Images */
 .technomusic {
     border-radius: 4.2%;
-    width: 65%;
-    max-width: 650px;
+    max-width: 80%;
+    height: auto;
     display: block;
     margin: 1rem 0;
 }
@@ -119,7 +119,8 @@ body {
         text-align: center;
 }
 .stickynote {
-  width: 113%;
+  max-width: 65%;
+  height: auto;
 }
 .musicIpod {
     position: relative;
@@ -154,8 +155,7 @@ body {
 
 /* Wallpaper */
 .phone-split {
-    width: 73%;
-    
+    max-width: 100%;
     height: auto;
     text-align: right;
 }

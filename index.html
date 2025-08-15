@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="player.css" type="text/css">
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="player.js"></script>
     <title>dm0niix</title>
 </head>
 <body>
@@ -53,21 +55,32 @@
             <div class="musicIpod">
                 <img src="media/ipod.png" alt="iPod">
                 <div class="songs">
+                    
+                    <div class="player-container">
+                    <div class="player">
+                    <button class="player-play-btn" data-playing="false">
+                        <span class="player-icon-play">▶</span>
+                        <span class="player-icon-pause hidden">⏸</span>
+                    </button>
 
-                    <audio controls class="edm">
-                        <source src="music/edm.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <div class="player-progress">
+                        <div class="player-progress-filled" style="flex-basis: 0%"></div>
+                    </div>
 
-                    <audio controls class="funky">
-                        <source src="music/funky.wav" type="audio/wav">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <span class="player-time-current">00:00</span> /
+                    <span class="player-time-duration">00:00</span>
 
-                    <audio controls class="turnt">
-                        <source src="music/turnt.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                    </audio>
+                    <input class="player-volume" type="range" min="0" max="1" step="0.01" value="1">
+                    </div>
+
+                    <ul class="playlist">
+                    <li data-src="music/edm.mp3">Song 1</li>
+                    <li data-src="music/funky.wav">Song 2</li>
+                    <li data-src="music/turnt.mp3">Song 3</li>
+                    </ul>
+                    </div>
+
+                    <audio></audio> <!-- single audio element -->
 
                 </div>
             </div>
