@@ -35,9 +35,13 @@ body {
 }
 
 /* Title */
+.TitleMessages {
+    overflow-x: hidden;
+}
 .titleText {
     text-align: center;
     transform: scale(2.5,1);
+    line-clamp: (2rem, 6vw, 5rem);
 }
 .large-text {
     font-size: clamp(2rem, 6vw, 5rem);
@@ -85,16 +89,17 @@ body {
 
 /* Image over text */
 .image-container {
+    text-align: center;
     position: relative;
 }
 .image-container img {
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
 }
 .image-container .introText {
     position: absolute;
     top: 15%;
-    left: 20%;
+    left: 25%;
     transform: translate(-50%, -50%);
     font-family: 'Fixedsys', sans-serif;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
@@ -109,6 +114,9 @@ body {
     max-width: 650px;
     display: block;
     margin: 1rem 0;
+}
+.technomusicDiv {
+        text-align: center;
 }
 .stickynote {
   width: 113%;
@@ -145,10 +153,11 @@ body {
 }
 
 /* Wallpaper */
-.wallpaper-split {
-    width: 68%;
+.phone-split {
+    width: 73%;
+    
     height: auto;
-    text-align: center;
+    text-align: right;
 }
 
 /* Responsive tweaks */
