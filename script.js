@@ -9,6 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'minesweeper/minesweeper.html';
     });
 
+    //open music
+    document.getElementById('musicPortfolio').addEventListener('click', () => {
+        window.location.href = 'musicPortfolio/music.html';
+    });
+
     // Studs Banner Movement
     const studs = document.querySelector('.studs');
     let offset = 0;
