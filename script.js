@@ -14,15 +14,16 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'musicPortfolio/music.html';
     });
 
-    // Studs Banner Movement
+// Studs Banner Movement
     const studs = document.querySelector('.studs');
     let offset = 0;
-    const speed = -0.6;
+    const speed = 0.6; // positive = move left, negative = move right
 
     function animateStuds() {
-        offset -= speed;
-        studs.style.backgroundPosition = `${offset}px 0`;
-        requestAnimationFrame(animateStuds);
+    offset += speed;
+    // use modulo to prevent offset from growing infinitely
+    studs.style.backgroundPosition = `${offset % window.innerWidth}px 0`;
+    requestAnimationFrame(animateStuds);
     }
 
     // Binary string

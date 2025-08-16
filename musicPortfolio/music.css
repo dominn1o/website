@@ -22,7 +22,7 @@ body {
 
 .title {
   margin: 20px 0 10px 0;
-  font-size: 2rem;
+  font-size: 4vw;
   font-weight: bold;
   color: white;
 }
@@ -40,11 +40,13 @@ body {
   display: flex;
   justify-content: center;   /* center horizontally */
   width: 100%;
-  height: auto;
+  height: 120%;
 }
 
 /* Player container */
 .player-container {
+  position: absolute;
+  top: 20%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +54,7 @@ body {
 
   width: 93vw;       /* responsive width */
   max-width: 1200px;
-  min-width: 400px;
+  min-width: 300px;
 
   background: rgb(134, 59, 122);
   border-radius: 3%;
@@ -89,8 +91,8 @@ body {
   border: 2px solid black;
   color: white;
   font-size: 23px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   cursor: pointer;
   display: flex;

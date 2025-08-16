@@ -29,9 +29,11 @@ body {
 
 /* Studs banner */
 .studs {
-    height: 85px;
-    background: url('media/studs.png') repeat-x;
-    background-size: auto 100%;
+  width: 150vw;                 /* force full viewport width */
+  height: 9vh;
+  background: url('media/studs.png') repeat-x;
+  background-size: auto 100%;   /* scale only vertically */
+  overflow-x: hidden;             /* in case */
 }
 
 /* Title */
@@ -117,13 +119,13 @@ body {
     position: relative;
 }
 .image-container img {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
 }
 .image-container .introText {
     position: absolute;
     top: 15%;
-    left: 25%;
+    left: 40%;
     transform: translate(-50%, -50%);
     font-family: 'Fixedsys', sans-serif;
     font-size: clamp(0.8rem, 2vw, 1.2rem);
@@ -143,38 +145,42 @@ body {
         text-align: center;
 }
 .stickynote {
-  max-width: 65%;
+  max-width: 70%;
   height: auto;
 }
+
 .musicIpod {
-    position: relative;
-    max-width: 300px;
+  position: relative;
+  max-width: 300px;      /* controls overall size */
+  margin: 0 auto;        /* center on screen */
 }
+
 .musicIpod img {
-    width: 140%;
-}
-.musicIpod .edm {
-    width: 100%;
-    position: absolute;
-    bottom: 79%;
-    left: 74%;
-    transform: translateX(-50%);
+  width: 100%;           /* iPod always scales with .musicIpod */
+  transform: scale(1,1.55);
+  display: block;
 }
 
-.musicIpod .funky {
-    width: 100%;
-    position: absolute;
-    bottom: 64%;
-    left: 74%;
-    transform: translateX(-50%);
+.songs {
+  position: absolute;
+  top: -27%;              /* adjust to line up with iPod screen */
+  left: -0.1%;             /* adjust to line up with iPod screen */
+  width: 71.5%;            /* % width of iPod screen area */
+  height: 156%;           /* % height of iPod screen area */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
 }
 
-.musicIpod .turnt {
-    width: 100%;
-    position: absolute;
-    bottom: 49%;
-    left: 74%;
-    transform: translateX(-50%);
+.player-container {
+  width: 100%;           /* fills the "screen" */
+  border: 2px solid black;
+  background: rgba(255,255,255,0.9); /* light background for contrast */
+  border-radius: 8px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Wallpaper */
