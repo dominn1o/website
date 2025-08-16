@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="music.css" />
+  <script type="text/javascript" src="music.js"></script>
+</head>
+
+<body>
+
+  <div class="songs">
+
+    <div class="player-container">
+        <div class="songName">
+            Select a song
+        </div>
+      <div class="player">
+        <button class="player-play-btn" data-playing="false">
+          <span class="player-icon-play">▶</span>
+          <span class="player-icon-pause hidden">⏸</span>
+        </button>
+
+        <div class="player-progress">
+          <div class="player-progress-filled" style="flex-basis: 0%"></div>
+        </div>
+
+        <div class="time">
+            <span class="player-time-current">00:00</span> /
+            <span class="player-time-duration">00:00</span>
+        </div>    
+        <input class="player-volume" type="range" min="0" max="1" step="0.01" value="1">
+      </div>
+
+        <ul class="playlist">
+        <li data-src="music/edm.mp3">EDM.wav</li>
+        <li data-src="music/acac.mp3">ACAC.wav</li>
+        <li data-src="music/angel.mp3">ANGEL.wav</li>
+        <li data-src="music/break.mp3">BREAK.wav</li>
+        <li data-src="music/funky.wav">FUNKY.wav</li>
+        <li data-src="music/turnt.mp3">TURNT.wav</li>
+        <li data-src="music/brrrrr.mp3">BRRRRR.wav</li>
+        <li data-src="music/chill.mp3">CHILL.wav</li>
+        <li data-src="music/crazy.mp3">CRAZY.wav</li>
+        <li data-src="music/digi.mp3">DIGI.wav</li>
+        <li data-src="music/digi2.mp3">DIGI2.wav</li>
+        <li data-src="music/dream.wav">DREAM.wav</li>
+        <li data-src="music/hauntme.mp3">HAUNTME.wav</li>
+        <li data-src="music/heaven.mp3">HEAVEN.wav</li>
+        <li data-src="music/idkbrah.mp3">IDKBRAH.wav</li>
+        <li data-src="music/insomnia.mp3">INSOMNIA.wav</li>
+        <li data-src="music/meh.mp3">MEH.wav</li>
+        <li data-src="music/oblivion.wav">OBLIVION.wav</li>
+        <li data-src="music/oooaaa.mp3">OOOAAA.wav</li>
+        <li data-src="music/pessimism.mp3">PESSIMISM.wav</li>
+        <li data-src="music/RnBTuT.mp3">RNB.wav</li>
+        </ul>
+        </div>
+
+        <audio></audio> <!-- single audio element -->
+
+    </div>
+
+</body>
+</html>

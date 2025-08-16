@@ -1,0 +1,176 @@
+/* Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Page background + centering */
+body {
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: flex-start;   /* push content toward top */
+  background-color: gray;
+  font-family: Arial, sans-serif;
+}
+
+/* Make header centered and stacked */
+.header {
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  margin: 20px 0 10px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Style the hr to look nice */
+.header hr {
+  width: 60%;             /* shorter than full width */
+  margin: 0 auto 20px auto; /* center it */
+  border: 1px solid white;  /* make it visible on gray background */
+}
+
+/* Songs wrapper */
+.songs {
+  margin-top: 40px;          /* spacing from top */
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  width: 100%;
+  height: auto;
+}
+
+/* Player container */
+.player-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 93vw;       /* responsive width */
+  max-width: 1200px;
+  min-width: 400px;
+
+  background: rgb(134, 59, 122);
+  border-radius: 3%;
+  border: 3px solid black;
+  gap: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.songName {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Player */
+.player {
+  display: flex;
+  flex-wrap: wrap;       /* allow elements to wrap on small screens */
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background: #f0f0f0;
+  border-radius: 8px;
+  width: 100%;           /* fill container width */
+  box-sizing: border-box;
+}
+
+/* Play/Pause button */
+.player-play-btn {
+  background: #007bff;
+  border: 2px solid black;
+  color: white;
+  font-size: 23px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.player-play-btn:hover {
+  background: #0056b3;
+}
+
+.player-icon-play,
+.player-icon-pause {
+  pointer-events: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Progress bar */
+.player-progress {
+  width: 72%;  /* flexible width */
+  height: 10px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  min-width: 80px;
+}
+
+.player-progress-filled {
+  height: 100%;
+  background: #007bff;
+  flex-basis: 0%;
+  transition: flex-basis 0.1s linear;
+}
+
+/* Timer */
+.player-time-current,
+.player-time-duration {
+  font-size: 80%;
+  color: #1f1f1f;
+  flex-shrink: 0;       /* prevent shrinking */
+}
+
+/* Volume slider */
+.player-volume {
+  width: 12%;
+  height: 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Playlist */
+.playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;          /* responsive width */
+  box-sizing: border-box;
+}
+
+.playlist li {
+  padding: 9.25px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.2s;
+}
+
+.playlist li:hover {
+  background: #248bc7;
+  font-size: 125%;
+  -webkit-text-fill-color: whitesmoke;
+  font-weight: 500;
+}
+
+.playlist li.active {
+  background: #007bff;
+  color: rgb(182, 182, 182);
+}
