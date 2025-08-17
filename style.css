@@ -27,6 +27,14 @@ body {
     font-family: sans-serif;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;       /* full height of screen */
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+}
+
 /* Studs banner */
 .studs {
   width: 150vw;                 /* force full viewport width */
@@ -213,6 +221,19 @@ body {
   height: auto;
 }
 
+.bottom-bar {
+  margin-top: auto;        /* pushes it to the bottom */
+  height: 10vh;
+  background-color: rgba(55,55,55,0.7);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.Instagram, .Tiktok, .Facebook {
+    border-radius: 50%;
+    height: 8vh;
+}
 /* Responsive tweaks */
 @media (max-width: 768px) {
     .container {

@@ -1,47 +1,25 @@
-.player {
-    background: rgb(35, 0, 50);
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    border-radius: 12px;
-    color: white;
-    width: 300px;
-    box-shadow: 0 0 10px rgba(211, 107, 211, 0.6);
-}
-
-.player button {
-    background: rgb(211, 107, 211);
+#Back {
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
     color: darkblue;
     border: none;
-    padding: 6px 10px;
-    font-size: 16px;
-    border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
+    font-size: 1rem;
+}
+#Back:hover {
+    opacity: 0.85;
 }
 
-.player button:hover {
-    background: rgb(170, 70, 170);
+.bottom-bar {
+  margin-top: auto;        /* pushes it to the bottom */
+  height: 10vh;
+  background-color: rgba(55,55,55,0.7);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.player input[type="range"] {
-    flex: 1;
-    height: 5px;
-    background: purple;
-    border-radius: 5px;
-}
-
-.player input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 12px;
-    height: 12px;
-    background: white;
+.Instagram, .Tiktok, .Facebook {
     border-radius: 50%;
-    cursor: pointer;
-}
-
-.player span {
-    min-width: 40px;
-    text-align: right;
+    height: 8vh;
 }
