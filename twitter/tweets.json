@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "user": "Alice",
+    "message": "Hello world! First tweet 🚀",
+    "date": "2025-08-18T14:23:11.123Z"
+  },
+  {
+    "id": 2,
+    "user": "Bob",
+    "message": "Just testing my Twitter clone.",
+    "date": "2025-08-18T14:25:47.890Z"
+  },
+  {
+    "id": 3,
+    "user": "domin",
+    "message": "hello",
+    "date": "2025-08-18T00:35:34.643Z"
+  },
+  {
+    "id": 4,
+    "user": "SWAGMESSIAH",
+    "message": "It look fun but it aint",
+    "date": "2025-08-18T00:36:07.589Z"
+  }
+]

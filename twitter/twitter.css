@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Milton';
+    src: url('../fonts/Milton_One.otf') format('opentype');
+}
+
+.header {
+  overflow-x: hidden;
+}
+
+.title {
+  font-family: sans-serif;
+  transform: scale(1.7,1);
+  text-align: center;
+  margin: 20px 0 10px 0;
+  font-size: 8vw;
+  font-weight: bold;
+  color: rgb(36, 157, 226);
+}
+
+.divisor {
+    background-color: rgb(36, 157, 226);
+    height: 5px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #d6d6d6;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+#post-section {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+#post-section input, #post-section textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+#post-btn {
+  padding: 0.5rem 1rem;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#tweets-section {
+  padding: 1rem;
+  background-color: rgb(69, 140, 221);
+}
+
+.tweet {
+  border-bottom: 1px solid #ccc;
+  padding: 0.5rem 0;
+}

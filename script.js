@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'musicPortfolio/music.html';
     });
 
+    //open shitpost
+    document.getElementById('shitpost').addEventListener('click', () => {
+        window.location.href = 'twitter/twitter.html';
+    });
+
 // Studs Banner Movement
     const studs = document.querySelector('.studs');
     let offset = 0;
