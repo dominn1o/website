@@ -15,13 +15,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //open shitpost
-    document.getElementById('shitpost').addEventListener('click', () => {
-        window.location.href = 'twitter/admin.html';
+    document.getElementById('twitteradmin').addEventListener('click', () => {
+        window.location.href = 'twitter/loginPage/login.html';
     });
 
     //open publicshitpost
     document.getElementById('publicshitpost').addEventListener('click', () => {
-        window.location.href = 'twitter/public.html';
+        window.location.href = 'twitter/publicTweet/public.html';
     });
 
 // Studs Banner Movement

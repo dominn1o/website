@@ -75,6 +75,8 @@ html, body {
     text-align: center;
 }
 #button1 {
+    position: relative;
+    z-index: 2;
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);
     color: darkblue;
@@ -83,9 +85,13 @@ html, body {
     font-size: 1rem;
 }
 #button1:hover {
+    position: relative;
+    z-index: 2;
     opacity: 0.85;
 }
 #minesweeperButton {
+    position: relative;
+    z-index: 2;
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);
     color: darkblue;
@@ -94,9 +100,13 @@ html, body {
     font-size: 1rem;
 }
 #minesweeperButton:hover {
+    position: relative;
+    z-index: 2;
     opacity: 0.85;
 }
 #musicPortfolio {
+    position: relative;
+    z-index: 2;
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);
     color: darkblue;
@@ -105,9 +115,13 @@ html, body {
     font-size: 1rem;
 }
 #musicPortfolio:hover {
+    position: relative;
+    z-index: 2;
     opacity: 0.85;
 }
-#shitpost {
+#twitteradmin {
+    position: relative;
+    z-index: 2;
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);
     color: darkblue;
@@ -115,10 +129,14 @@ html, body {
     cursor: pointer;
     font-size: 1rem;
 }
-#shitpost:hover {
+#twitteradmin:hover {
+    position: relative;
+    z-index: 2;
     opacity: 0.85;
 }
 #publicshitpost {
+    position: relative;
+    z-index: 2;
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);
     color: darkblue;
@@ -127,10 +145,14 @@ html, body {
     font-size: 1rem;
 }
 #publicshitpost:hover {
+    position: relative;
+    z-index: 2;
     opacity: 0.85;
 }
 
 .technologo {
+    position: s;
+    z-index: 1;
     width:70vw; 
     height:30vh;
     transform: scale(1,2.4); 

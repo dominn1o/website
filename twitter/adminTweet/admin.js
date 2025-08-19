@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Go back
     document.getElementById('Back').addEventListener('click', () => {
-        window.location.href = '../index.html';
+        window.location.href = '../../index.html';
     });
 
     const form = document.getElementById('tweet-form');
@@ -34,18 +34,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function loadTweets() {
-    try {
-        const res = await fetch('/tweets');
-        if (!res.ok) throw new Error(`GET /tweets failed: ${res.status}`);
-        const tweets = await res.json();
-        tweetsSection.innerHTML = '';
-        const frag = document.createDocumentFragment();
-        for (const t of tweets) frag.appendChild(renderTweetSafe(t));
-        tweetsSection.appendChild(frag);
-    } catch (err) {
-        console.error(err);
-        tweetsSection.textContent = 'Could not load posts.';
-    }
+        try {
+            const res = await fetch('/tweets');
+            if (!res.ok) throw new Error(`GET /tweets failed: ${res.status}`);
+            
+            const tweets = await res.json();
+
+            tweets.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            tweetsSection.innerHTML = '';
+
+            const frag = document.createDocumentFragment();
+            for (const t of tweets) {
+                frag.appendChild(renderTweetSafe(t));
+            }
+            tweetsSection.appendChild(frag);
+        } catch (err) {
+            console.error(err);
+            tweetsSection.textContent = 'Could not load posts.';
+        }
     }
 
     async function postTweet(user, message) {

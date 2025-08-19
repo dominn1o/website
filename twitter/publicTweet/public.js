@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Go back button
     document.getElementById('Back').addEventListener('click', () => {
-        window.location.href = '../index.html';
+        window.location.href = '../../index.html';
     });
 
     const tweetsSection = document.getElementById('tweets-section');
@@ -33,10 +33,17 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             const res = await fetch('/tweets');
             if (!res.ok) throw new Error(`GET /tweets failed: ${res.status}`);
+            
             const tweets = await res.json();
+
+            tweets.sort((a, b) => new Date(b.date) - new Date(a.date));
+
             tweetsSection.innerHTML = '';
+
             const frag = document.createDocumentFragment();
-            for (const t of tweets) frag.appendChild(renderTweetSafe(t));
+            for (const t of tweets) {
+                frag.appendChild(renderTweetSafe(t));
+            }
             tweetsSection.appendChild(frag);
         } catch (err) {
             console.error(err);
@@ -44,6 +51,5 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Only load tweets (no form to handle here)
     loadTweets();
 });
