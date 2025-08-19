@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //open shitpost
     document.getElementById('shitpost').addEventListener('click', () => {
-        window.location.href = 'twitter/twitter.html';
+        window.location.href = 'twitter/admin.html';
+    });
+
+    //open publicshitpost
+    document.getElementById('publicshitpost').addEventListener('click', () => {
+        window.location.href = 'twitter/public.html';
     });
 
 // Studs Banner Movement

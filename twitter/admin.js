@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    //Go back
+    document.getElementById('Back').addEventListener('click', () => {
+        window.location.href = '../index.html';
+    });
+
     const form = document.getElementById('tweet-form');
     const usernameInput = document.getElementById('username');
     const messageInput = document.getElementById('message');

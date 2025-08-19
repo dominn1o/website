@@ -118,6 +118,17 @@ html, body {
 #shitpost:hover {
     opacity: 0.85;
 }
+#publicshitpost {
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#publicshitpost:hover {
+    opacity: 0.85;
+}
 
 
 
