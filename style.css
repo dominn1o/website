@@ -130,6 +130,13 @@ html, body {
     opacity: 0.85;
 }
 
+.technologo {
+    width:70vw; 
+    height:30vh;
+    transform: scale(1,2.4); 
+    margin: 2rem auto;
+    display: block;  
+}
 
 
 /* Main layout */
