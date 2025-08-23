@@ -1,17 +1,5 @@
 [
   {
-    "id": 1,
-    "user": "Alice",
-    "message": "Hello world! First tweet 🚀",
-    "date": "2025-08-18T14:23:11.123Z"
-  },
-  {
-    "id": 2,
-    "user": "Bob",
-    "message": "Just testing my Twitter clone.",
-    "date": "2025-08-18T14:25:47.890Z"
-  },
-  {
     "id": 3,
     "user": "domin",
     "message": "hello",
@@ -34,5 +22,17 @@
     "user": "MF",
     "message": "SWAGSTAGRAM",
     "date": "2025-08-19T17:56:46.442Z"
+  },
+  {
+    "id": 7,
+    "user": "dead",
+    "message": "YOUSUCK",
+    "date": "2025-08-23T14:14:07.588Z"
+  },
+  {
+    "id": 8,
+    "user": "Dominik",
+    "message": "hello",
+    "date": "2025-08-23T14:21:31.914Z"
   }
 ]

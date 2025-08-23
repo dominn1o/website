@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'musicPortfolio/music.html';
     });
 
-    //open shitpost
+    //open shitpost admin
     document.getElementById('twitteradmin').addEventListener('click', () => {
         window.location.href = 'twitter/loginPage/login.html';
     });
@@ -22,6 +22,16 @@ document.addEventListener('DOMContentLoaded', () => {
     //open publicshitpost
     document.getElementById('publicshitpost').addEventListener('click', () => {
         window.location.href = 'twitter/publicTweet/public.html';
+    });
+
+    //open chat admin
+    document.getElementById('chatadmin').addEventListener('click', () => {
+        window.location.href = 'chat/loginPage/login.html';
+    });
+
+    //open publicchat
+    document.getElementById('publicchat').addEventListener('click', () => {
+        window.location.href = 'chat/publicChat/public.html';
     });
 
 // Studs Banner Movement

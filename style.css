@@ -149,6 +149,36 @@ html, body {
     z-index: 2;
     opacity: 0.85;
 }
+#publicchat {
+    position: relative;
+    z-index: 2;
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#publicchat:hover {
+    position: relative;
+    z-index: 2;
+    opacity: 0.85;
+}
+#chatadmin {
+    position: relative;
+    z-index: 2;
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(211, 107, 211);
+    color: darkblue;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+#chatadmin:hover {
+    position: relative;
+    z-index: 2;
+    opacity: 0.85;
+}
 
 .technologo {
     position: s;
