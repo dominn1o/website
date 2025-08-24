@@ -34,6 +34,33 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'chat/publicChat/public.html';
     });
 
+    // cursor
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorImg = cursor.querySelector("img");
+
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+    });
+
+    // Detect hovering over interactive elements
+    // Add .playlist li to the selector list
+    const interactive = ['a', 'button', 'input', 'textarea', '[role="button"]', '.playlist li'];
+
+    document.addEventListener('mouseover', (e) => {
+        if (interactive.some(sel => e.target.matches(sel))) {
+        cursor.classList.add('hovering');
+        cursorImg.src = "/media//cursors/fuckcursorhover.png"; // swap PNG
+        }
+    });
+
+    document.addEventListener('mouseout', (e) => {
+        if (interactive.some(sel => e.target.matches(sel))) {
+        cursor.classList.remove('hovering');
+        cursorImg.src = "/media/fuckcursor.png";
+        }
+    });
+
 // Studs Banner Movement
     const studs = document.querySelector('.studs');
     let offset = 0;

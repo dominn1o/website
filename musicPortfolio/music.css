@@ -15,6 +15,43 @@ body {
   text-align: center; /* if you still want centered text */
 }
 
+/* Hide system cursor everywhere */
+* {
+  cursor: none !important;
+}
+
+
+/* Custom cursor container */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none; /* Allow clicks through */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* The spinning PNG */
+.custom-cursor img {
+  width: 100%;
+  height: 100%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Hover effect state */
+.custom-cursor.hovering {
+  transform: translate(-50%, -50%) scale(1.3);
+  filter: drop-shadow(0 0 7px rgb(255, 255, 255));
+}
+
 #Back {
     padding: 0.8rem 1.2rem;
     background-color: rgb(211, 107, 211);

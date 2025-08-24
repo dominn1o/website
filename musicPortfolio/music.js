@@ -1,4 +1,30 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  // cursor
+  const cursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.top = `${e.clientY}px`;
+    cursor.style.left = `${e.clientX}px`;
+  });
+
+  // Detect hovering over interactive elements
+  // Add .playlist li to the selector list
+  const interactive = ['a', 'button', 'input', 'textarea', '[role="button"]', '.playlist li'];
+
+  document.addEventListener('mouseover', (e) => {
+    if (interactive.some(sel => e.target.matches(sel))) {
+      cursor.classList.add('hovering');
+    }
+  });
+
+  document.addEventListener('mouseout', (e) => {
+    if (interactive.some(sel => e.target.matches(sel))) {
+      cursor.classList.remove('hovering');
+    }
+  });
+
+
   const audioElement = document.querySelector("audio");
   const audioCtx = new AudioContext();
   const track = audioCtx.createMediaElementSource(audioElement);

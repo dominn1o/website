@@ -27,6 +27,33 @@ body {
     font-family: sans-serif;
 }
 
+/* Hide system cursor everywhere */
+* {
+  cursor: none !important;
+}
+
+
+/* Custom cursor container */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none; /* Allow clicks through */
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Hover effect state */
+.custom-cursor.hovering {
+  transform: translate(-50%, -50%) scale(1.2);
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.342));
+}
+
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -72,113 +99,38 @@ html, body {
 
 /* Buttons */
 .centered {
-    text-align: center;
+  text-align: center;
+  margin-top: 1.5rem;
 }
-#button1 {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+
+.nav-btn {
+  position: relative;
+  z-index: 2;
+  padding: 0.8rem 1.6rem;
+  margin: 0.5rem;
+  background: linear-gradient(135deg, rgb(211, 107, 211), rgb(150, 80, 200));
+  color: darkblue;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-#button1:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
+
+.nav-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 12px rgba(211, 107, 211, 0.8),
+              0 0 20px rgba(150, 80, 200, 0.6);
 }
-#minesweeperButton {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+
+.nav-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
-#minesweeperButton:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
-#musicPortfolio {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#musicPortfolio:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
-#twitteradmin {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#twitteradmin:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
-#publicshitpost {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#publicshitpost:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
-#publicchat {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#publicchat:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
-#chatadmin {
-    position: relative;
-    z-index: 2;
-    padding: 0.8rem 1.2rem;
-    background-color: rgb(211, 107, 211);
-    color: darkblue;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#chatadmin:hover {
-    position: relative;
-    z-index: 2;
-    opacity: 0.85;
-}
+
 
 .technologo {
     position: s;
@@ -192,6 +144,51 @@ html, body {
 
 
 /* Main layout */
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 80vh;
+  background: rgba(153, 153, 153, 0.616);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(70, 70, 70, 0.822);
+}
+
+.sidebar img {
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.sidebar h2 {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.status {
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ff66cc;
+}
+
+.about ul {
+  padding: 0;
+  list-style: none;
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -204,6 +201,7 @@ html, body {
 
 /* Image over text */
 .image-container {
+    width: 35vw;
     text-align: center;
     position: relative;
 }
