@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('mouseover', (e) => {
         if (interactive.some(sel => e.target.matches(sel))) {
         cursor.classList.add('hovering');
-        cursorImg.src = "/media//cursors/fuckcursorhover.png"; // swap PNG
+        cursorImg.src = "/media/cursors/fuckcursorhover.png"; // swap PNG
         }
     });
 
     document.addEventListener('mouseout', (e) => {
         if (interactive.some(sel => e.target.matches(sel))) {
         cursor.classList.remove('hovering');
-        cursorImg.src = "/media/fuckcursor.png";
+        cursorImg.src = "/media/cursors/fuckcursor.png";
         }
     });
 
